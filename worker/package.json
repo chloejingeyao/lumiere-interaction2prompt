@@ -1,0 +1,11 @@
+{
+  "name": "v2c-proxy",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.81.1"
+  }
+}

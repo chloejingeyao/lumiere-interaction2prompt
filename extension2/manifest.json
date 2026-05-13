@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Lumiere Builder",
+  "version": "0.1.0",
+  "description": "Select any UI element and generate a precise AI refactoring prompt.",
+  "permissions": ["activeTab", "tabs", "scripting", "sidePanel", "storage"],
+  "host_permissions": ["https://v2c-proxy.lumiere-project.workers.dev/*"],
+  "icons": {
+    "16":  "sidepanel/logo.png",
+    "48":  "sidepanel/logo.png",
+    "128": "sidepanel/logo.png"
+  },
+  "action": {
+    "default_title": "Open Lumiere",
+    "default_icon": {
+      "16":  "sidepanel/logo.png",
+      "48":  "sidepanel/logo.png",
+      "128": "sidepanel/logo.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["page_script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

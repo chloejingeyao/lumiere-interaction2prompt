@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumiere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600;12..96,75..100,700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ MAIN VIEW ═══════════════ -->
+  <div id="view-main">
+
+    <header>
+      <div class="logo">
+        <span class="logo-text">Lumiere</span><span class="logo-dot">.</span>
+      </div>
+      <div class="header-actions">
+        <button id="btn-inspect" class="btn-inspect">
+          <span class="btn-inspect-dot"></span>
+          Select Element
+        </button>
+        <button id="btn-ann-pick" class="btn-inspect hidden">
+          <span class="btn-inspect-dot"></span>
+          Annotate Element
+        </button>
+      </div>
+    </header>
+
+    <!-- Mode tabs -->
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="prompt">Builder</button>
+      <button class="mode-tab" data-mode="annotator">Annotator</button>
+    </div>
+
+    <!-- ── Prompt Builder mode ── -->
+    <div id="mode-prompt" class="mode-content">
+
+      <section id="section-items">
+        <div id="items-label" class="items-label hidden">
+          <span class="section-eyebrow">Selected Element</span>
+          <button id="btn-reset" class="btn-reset">Reset</button>
+        </div>
+        <div id="items-empty" class="empty-state">
+          <p>Click <strong>Select Element</strong>, then click any element on the page to make changes</p>
+        </div>
+        <div id="items-container"></div>
+        <button id="btn-add-element" class="btn-add-element hidden">+ Add another element</button>
+      </section>
+
+      <footer>
+        <textarea id="prompt-text" class="prompt-preview hidden" spellcheck="false"></textarea>
+        <button id="btn-generate" class="btn-primary" disabled>Generate Prompt</button>
+        <div class="footer-row">
+          <button id="btn-copy" class="btn-secondary hidden">Copy</button>
+        </div>
+      </footer>
+
+    </div><!-- /#mode-prompt -->
+
+    <!-- ── Annotator mode ── -->
+    <div id="mode-annotator" class="mode-content hidden">
+
+      <div class="ann-scroll-area">
+        <div id="ann-label" class="items-label hidden">
+          <span class="section-eyebrow">Selected Element</span>
+          <button id="btn-ann-reset" class="btn-reset">Reset</button>
+        </div>
+        <div id="ann-empty" class="empty-state">
+          <p>Click <strong>Annotate Element</strong>, then click any element on the page to add comments</p>
+        </div>
+        <div id="ann-list" class="ann-list"></div>
+        <button id="btn-ann-add" class="btn-add-element hidden">+ Add another element</button>
+      </div>
+
+      <footer>
+        <textarea id="ann-prompt-output" class="prompt-preview hidden" spellcheck="false"></textarea>
+        <button id="btn-ann-generate" class="btn-primary" disabled>Generate Prompt</button>
+         <div class="footer-row">
+          <button id="btn-ann-copy" class="btn-secondary hidden">Copy</button>
+        </div>
+      </footer>
+
+    </div><!-- /#mode-annotator -->
+
+  </div><!-- /#view-main -->
+
+  <!-- ═══════════════ PICKER VIEW ═══════════════ -->
+  <div id="view-picker" class="hidden">
+
+    <header class="picker-header">
+      <button id="btn-back" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </button>
+      <span id="picker-title" class="picker-title"></span>
+    </header>
+
+    <div class="picker-search-wrap">
+      <svg class="search-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M9 9l2.5 2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <input id="picker-search" type="text" class="search-input" placeholder="Search components…" autocomplete="off" />
+    </div>
+
+    <ul id="picker-list" class="picker-list"></ul>
+
+  </div><!-- /#view-picker -->
+
+  <!-- ═══════════════ COLOR PICKER VIEW ═══════════════ -->
+  <div id="view-color" class="hidden">
+
+    <header class="picker-header">
+      <button id="btn-color-back" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </button>
+      <span id="color-picker-title" class="picker-title"></span>
+    </header>
+
+    <div class="color-picker-body">
+
+      <div class="cp-canvas-wrap">
+        <canvas id="cp-canvas" width="260" height="180"></canvas>
+        <div id="cp-cursor" class="cp-cursor"></div>
+      </div>
+
+      <div class="cp-row">
+        <div id="cp-preview" class="cp-preview"></div>
+        <div class="cp-sliders">
+          <div class="cp-slider-wrap">
+            <canvas id="cp-hue" width="200" height="14"></canvas>
+            <div id="cp-hue-thumb" class="cp-thumb"></div>
+          </div>
+          <div class="cp-slider-wrap cp-alpha-wrap">
+            <canvas id="cp-alpha" width="200" height="14"></canvas>
+            <div id="cp-alpha-thumb" class="cp-thumb"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cp-inputs">
+        <div class="cp-input-group">
+          <label class="cp-label">HEX</label>
+          <input id="cp-hex" class="cp-input" type="text" maxlength="7" spellcheck="false" />
+        </div>
+        <div class="cp-input-group cp-input-alpha">
+          <label class="cp-label">A</label>
+          <input id="cp-alpha-val" class="cp-input" type="number" min="0" max="100" />
+        </div>
+        <div class="cp-input-group cp-input-eyedropper">
+          <label class="cp-label">&nbsp;</label>
+          <button id="btn-eyedropper" class="cp-eyedropper-btn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 1.5a1.8 1.8 0 0 0-2.55 0L8.6 2.85l-.7-.7-.95.95.7.7-5.3 5.3A1 1 0 0 0 2.1 10v1.4a.5.5 0 0 0 .5.5H4a1 1 0 0 0 .71-.29l5.3-5.3.7.7.95-.95-.7-.7 1.34-1.36a1.8 1.8 0 0 0 0-2.55z" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <button id="btn-color-apply" class="btn-primary">Apply Color</button>
+
+    </div>
+
+  </div><!-- /#view-color -->
+
+  <!-- ═══════════════ FONT PICKER VIEW ═══════════════ -->
+  <div id="view-font" class="hidden">
+
+    <header class="picker-header">
+      <button id="btn-font-back" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </button>
+      <span class="picker-title">Text Font</span>
+    </header>
+
+    <div class="font-picker-body">
+
+      <div class="font-search-wrap">
+        <svg class="search-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M9 9l2.5 2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <input id="font-search" class="search-input" type="text" placeholder="Search fonts…" autocomplete="off" />
+      </div>
+
+      <div class="font-controls">
+        <div class="font-control-group">
+          <label class="ec-typo-label">Weight</label>
+          <select id="font-weight-select" class="ec-typo-select">
+            <option value=""></option>
+            <option value="100">100 Thin</option>
+            <option value="200">200 Extralight</option>
+            <option value="300">300 Light</option>
+            <option value="400">400 Regular</option>
+            <option value="500">500 Medium</option>
+            <option value="600">600 Semibold</option>
+            <option value="700">700 Bold</option>
+            <option value="800">800 Extrabold</option>
+            <option value="900">900 Black</option>
+          </select>
+        </div>
+        <div class="font-control-group">
+          <label class="ec-typo-label">Size (px)</label>
+          <input id="font-size-input" class="ec-typo-input" type="number" min="8" max="200" placeholder="—" />
+        </div>
+      </div>
+
+      <ul id="font-list" class="picker-list font-list"></ul>
+
+    </div>
+
+    <footer style="padding:12px 16px 16px; border-top:1px solid var(--border); flex-shrink:0;">
+      <button id="btn-font-apply" class="btn-primary">Apply</button>
+    </footer>
+
+  </div><!-- /#view-font -->
+
+  <script type="module" src="panel.js"></script>
+</body>
+</html>

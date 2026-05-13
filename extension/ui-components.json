@@ -1,0 +1,296 @@
+[
+  {
+    "ui_name": "Accordion",
+    "also_known_as": "Arrow toggle, Collapse, Collapsible sections, Collapsible, Details, Disclosure, Expandable, Expander, ShowyHideyThing",
+    "description": "An accordion is a vertical stack of interactive headings used to toggle the display of further information; each item can be 'collapsed' with just a short label visible or 'expanded' to show the full content.",
+    "usage_guidelines": "Accordions work well on smaller screens, as they reduce the amount of vertical scrolling required to get an overview of the content. They also require very little horizontal space, unlike components such as tabs. Some implementations allow for only a single accordion item to be expanded at any one time — do this with caution, as some users may wish to view the content from two items at the same time. Be mindful that when you are using an accordion you are hiding content from users — they therefore should not be used for essential information." 
+  },
+  {
+    "ui_name": "Alert",
+    "also_known_as": "Banner, Inline, Message, Notification, Feedback, Message, Banner, Callout",
+    "description": "A way of informing the user of important changes in a prominent way."
+  },
+  {
+    "ui_name": "Avatar",
+    "description": "A graphical representation of a user: usually a photo, illustration, or initial."
+  },
+  {
+    "ui_name": "Badge",
+    "also_known_as": "Tag, Label, Chip, Pill",
+    "description": "A small label, generally appearing inside or in close proximity to another larger interface component, representing a status, property, or some other metadata."
+  },
+  {
+    "ui_name": "Breadcrumbs",
+    "description": "Breadcrumbs (or a ‘breadcrumb trail’) are a form of navigation, consisting of a list of links arranged in a hierarchical or chronological order. Their purpose is to help users keep track of their location by showing the position of the current page.",
+    "usage_guidelines":"The most common place for a breadcrumbs component to appear is before the main content of a page1. It’s usual to see a progression from least specific (the highest-level page or least specific category) to most specific category. The highest level page may be the homepage or the root of the current section.Separation of breadcrumb items is usually indicated with either: a greater-than symbol (>), a forward slash (/), or a similar-looking icon."
+  },
+  {
+    "ui_name": "Button",
+    "description": "Buttons trigger an action such as submitting a form or showing/hiding an interface component.",
+    "usage_guidelines":"Dynamically size the button to fit the text in it; Keep the text centre-aligned on a single line; Ensure the button has distinct styles for disabled, hover, focused, active/pressed and default states; Unless it appears inside a button group with other options, use whitespace around the button to distance it from other content; Make the button big enough so users of touch devices can comfortably use it (a minimum of 10mm in both dimensions)."
+  },
+  {
+    "ui_name": "Button group",
+    "description": "A wrapper for multiple, related buttons.",
+    "usage_guidelines": "Keep primary actions on the right and secondary actions on the left."
+  },
+  {
+    "ui_name": "Card",
+    "also_known_as":"Tile",
+    "description": "A container for content representing a single entity. e.g. a contact, article, or task."
+  },
+  {
+    "ui_name": "Carousel",
+    "also_known_as":"Content slider",
+    "description": "A means of displaying multiple slides of content, one or more at a time. Navigation between slides can be controlled via swiping, scrolling, or buttons."
+  },
+  {
+    "ui_name": "Checkbox",
+    "description": "An input for choosing from predefined options: when used alone, it gives a binary choice (checked/unchecked); in a group it allows the user to select multiple values from a list of options."
+  },
+  {
+    "ui_name": "Color picker",
+    "description": "An input for choosing a color."
+  },
+  {
+    "ui_name": "Combobox",
+    "also_known_as": "Autocomplete, Autosuggest",
+    "description": "An input that behaves similarly to a select, with the addition of a free text input to filter options."
+  },
+  {
+    "ui_name": "Date input",
+    "description": "A means of inputting a date – often separated into multiple individual fields for day/month/year."
+  },
+  {
+    "ui_name": "Datepicker",
+    "also_known_as":"Calendar, Datetime picker",
+    "description": "A visual way to choose a date using a calendar view."
+  },
+  {
+    "ui_name": "Drawer",
+    "also_known_as":"Pannel, Drawer, Side Drawer, Bottom Sheet, Tray, Flyout, Sheet",
+    "description": "A panel which slides out from the edge of the screen."
+  },
+  {
+    "ui_name": "Dropdown menu",
+     "also_known_as":"Select Menu, Listbox",
+    "description": "A menu in which options are hidden by default but can be shown by interacting with a button; it differs from a select in that it shows actions or navigation options and is not a form input."
+  },
+  {
+    "ui_name": "Empty state",
+    "also_known_as":"Blankstate",
+    "description": "An indication to the user that there is no data to display in the current view; it often includes an alternative action (e.g. try a different search term)."
+  },
+  {
+    "ui_name": "Fieldset",
+    "also_known_as": "Form group, Input group",
+    "description": "A wrapper for related form fields."
+  },
+  {
+    "ui_name": "File",
+    "also_known_as": "Attachment, Download",
+    "description": "A representation of a file such as an uploaded attachment or a downloadable PDF."
+  },
+  {
+    "ui_name": "File upload",
+    "also_known_as": "File input, File uploader, Dropzone",
+    "description": "An input which allows users to upload a file from their device."
+  },
+  {
+    "ui_name": "Footer",
+    "description": "Commonly appearing at the bottom of a page or section, a footer is used to display copyright and legal information or links to related content."
+  },
+  {
+    "ui_name": "Form",
+    "description": "A grouping of input controls that allow a user to submit information to a server."
+  },
+  {
+    "ui_name": "Header",
+    "also_known_as": "Navbar, Top bar",
+    "description": "An element that appears across the top of all pages on a website or application; it usually contains the site name and main navigation."
+  },
+  {
+    "ui_name": "Label",
+     "also_known_as": "Form label",
+    "description": "A title or caption used to introduce a new section."
+  },
+  {
+    "ui_name": "Helper text",
+    "description": "Text appearing alongside or below a form input to provide additional context or guidance."
+  },
+  {
+    "ui_name": "Horizontal rule",
+    "description": "A line used to visually separate content within a page."
+  },
+  {
+    "ui_name": "Icon",
+    "description": "A symbol used to communicate functionality or provide visual cues."
+  },
+  {
+    "ui_name": "Image",
+    "description": "A visual representation such as a photo, illustration, or graphic."
+  },
+  {
+    "ui_name": "Keyboard key",
+    "description": "A visual representation of a key on a keyboard, often used in documentation to show shortcuts."
+  },
+  {
+    "ui_name": "Link",
+    "description": "An interactive element used for navigation between pages or sections."
+  },
+  {
+    "ui_name": "List",
+    "description": "Lists are used for grouping a collection of related items. In HTML there are three types: 1. unordered list — for items in no particular order. 2. ordered list — for items in a specific order. 3. description list — for key-value pairs."
+  },
+  {
+    "ui_name": "Loader",
+    "description": "An animation used to indicate that an action or content is being processed or loaded."
+  },
+  {
+    "ui_name": "Popover",
+    "description": "A popover is a wrapper for content that floats above other elements on the page. It is shown or hidden by interacting (usually clicking, but can also be on focus or hover) with a trigger element such as a button. The popover appears above, below, or to one side of this trigger element, often with a small triangle linking the two elements."
+  },
+  {
+    "ui_name": "Menu",
+    "description": "A list of actions or options that a user can choose from."
+  },
+  {
+    "ui_name": "Modal",
+    "also_known_as": "Dialog, Popup, Modal window",
+    "description": "A dialog box or window that appears on top of the main content, requiring user interaction before they can return to the main application."
+  },
+  {
+    "ui_name": "Multi-select",
+    "description": "An input that allows users to select multiple options from a predefined list."
+  },
+  {
+    "ui_name": "Number input",
+    "description": "An input field specifically for entering numbers, often with controls to increment or decrement the value."
+  },
+  {
+    "ui_name": "Pagination",
+    "description": "A series of links used to navigate across multiple pages of content."
+  },
+  {
+    "ui_name": "Password input",
+    "description": "A secure text input that masks the characters entered."
+  },
+  {
+    "ui_name": "Progress bar",
+    "description": "A visual representation of the completion status of a process or task."
+  },
+  {
+    "ui_name": "Radio button",
+    "also_known_as":"Radio, Radio group",
+    "description": "A control that allows a user to select only one option from a set of mutually exclusive choices."
+  },
+  {
+    "ui_name": "Search input",
+    "description": "A text input designed for entering search queries."
+  },
+  {
+    "ui_name": "Segmented control",
+    "also_known_as":"Toggle button group",
+    "description": "A hybrid somewhere between a button group, radio buttons, and tabs; segmented controls are used to switch between different options or views."
+  },
+  {
+    "ui_name": "Select",
+    "description": "A form input used for selecting a value: when collapsed it shows the currently selected option and when expanded, it shows a scrollable list of predefined options for the user to choose from."
+  },
+  {
+    "ui_name": "Skeleton",
+    "also_known_as":"Skeleton loader",
+    "description": "A placeholder used to represent content that is still loading, giving a visual hint of the layout."
+  },
+  {
+    "ui_name": "Skip link",
+    "description": "Links within a page for skipping to another section, primarily for users who navigate using a keyboard."
+  },
+  {
+    "ui_name": "Slider",
+    "also_known_as":"Range input, Range slider",
+    "description": "A form control for choosing a value within a preset range of values."
+  },
+  {
+    "ui_name": "Spinner",
+    "also_known_as":"Loader, Loading, Progress circle",
+    "description": "A visual indicator that a process is happening in the background but the interface is not yet ready for interaction."
+  },
+  {
+    "ui_name": "Stepper",
+    "also_known_as":"Nudger, Quantity, Counter",
+    "description": "A control for editing a numeric value with buttons for decrementing / incrementing."
+  },
+  {
+    "ui_name": "Progress indicator",
+    "also_known_as":"Progress tracker, Stepper, Steps, Meter",
+    "description": "A representation of a user’s progress through a series of discrete steps."
+  },
+  {
+    "ui_name": "Quote",
+    "also_known_as":"Pull quote, Block quote",
+    "description": "A representation of a user’s progress through a series of discrete steps."
+  },
+  {
+    "ui_name": "Switch",
+    "description": "A toggle used to turn a specific setting or feature on or off."
+  },
+  {
+    "ui_name": "Table",
+    "description": "A component for displaying large amounts of data in rows and columns; commonly referred to as a 'Data Table' when it includes sorting and/ or filtering functionality."
+  },
+  {
+    "ui_name": "Tabs",
+    "description": "Tabbed interfaces are a way of navigating between multiple panels, reducing clutter and fitting more into a smaller space."
+  },
+  {
+    "ui_name": "Tag",
+    "description": "A small label used for categorization or to represent a keyword."
+  },
+  {
+    "ui_name": "Text area",
+    "also_known_as":"Textbox, Text box",
+    "description": "A form control for editing multi-line text."
+  },
+  {
+    "ui_name": "Text input",
+    "description": "A form control that accepts a single line of text."
+  },
+  {
+    "ui_name": "Toast",
+    "also_known_as":"Snackbar",
+    "description": "A type of alert which appears in a layer above other content, visually similar to a mobile or desktop push notification."
+  },
+  {
+    "ui_name": "Toggle",
+    "also_known_as":"Switch, Lightswitch, Toggle button",
+    "description": "A control used to switch between two states: often on or off."
+  },
+  {
+    "ui_name": "Tooltip",
+    "also_known_as":"Toggletip",
+    "description": "A means of displaying a description or extra information about an element, usually on hover, but can also be on click or tap."
+  },
+  {
+    "ui_name": "Tree view",
+    "description": "A component for displaying nested hierarchical information, such as a table of contents or directory structure.",
+    "usage_guidelines": "For list views containing a large number of items, a free text filter input can help users find relevant nodes quickly.If your list view contains different types of entity (e.g.: folders and files; files with different extensions), icons can aid with navigation. If there is only a single type of entity in your tree, icons can be unnecessary clutter."
+  },
+  {
+    "ui_name": "Tree",
+    "description": "A hierarchical list often used for folder structures or navigation menus."
+  },
+  {
+    "ui_name": "Stack",
+    "description": "A wrapper component for adding a consistent margin between components."
+  },
+  {
+    "ui_name": "Video",
+    "description": "Video players are used for displaying video content; they often include controls to control playback."
+  },
+  {
+    "ui_name": "Visually hidden",
+    "also_known_as":"Screenreader only",
+    "description": "Invisible text used to provide extra context for users of assistive technology."
+  }
+]
