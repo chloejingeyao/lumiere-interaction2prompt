@@ -8,13 +8,9 @@ I built Lumiere out of necessity during late-night "vibe coding" sessions. While
 
 Lumiere fixes this. It captures any live UI element and its interactions, instantly generating a high-fidelity technical prompt. It gives your AI companion the exact context needed to execute flawlessly on the first try, so you can stop wrestling with prompts and keep shipping.
 
+🔗 **Know more:** [lumiere-extension.com](https://lumiere-extension.com/)
+
 ## **Features**
-
-## **Demo**
-
-<video src="https://github.com/chloejingeyao/lumiere-interaction2prompt/releases/download/v0.1.0/demo_video.mp4" controls width="100%"></video>
-
----
 
 🔒 **Privacy & Security:** Your API keys are stored locally in your browser's extension storage (chrome.storage). They are sent directly from your machine to the respective AI provider (Google/Anthropic) to handle your requests. Your keys are never collected, shared, or sent to any external servers.
 
