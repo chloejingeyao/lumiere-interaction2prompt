@@ -10,6 +10,12 @@ Lumiere fixes this. It captures any live UI element and its interactions, instan
 
 ## **Features**
 
+## **Demo**
+
+<video src="demo_video.mp4" controls width="100%"></video>
+
+---
+
 🔒 **Privacy & Security:** Your API keys are stored locally in your browser's extension storage (chrome.storage). They are sent directly from your machine to the respective AI provider (Google/Anthropic) to handle your requests. Your keys are never collected, shared, or sent to any external servers.
 
 | Feature Module | Description |
