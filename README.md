@@ -1,6 +1,4 @@
-# **Lumiere**
-
-### **interaction2prompt**
+# **Lumiere (interaction2prompt)**
 
 A lightweight Chrome extension designed for creators, designers, and AI coding users to seamlessly translate **dynamic UI interactions** into production-ready prompts.
 
@@ -9,8 +7,6 @@ A lightweight Chrome extension designed for creators, designers, and AI coding u
 I built Lumiere out of necessity during late-night "vibe coding" sessions. While finding an incredible interactive UI across the web is easy, translating the living behaviors into precise language for an AI agent is incredibly frustrating. Without the exact technical vocabulary, you get stuck in token-wasting back-and-forth loops that result in generic "AI slop."
 
 Lumiere fixes this. It captures any live UI element and its interactions, instantly generating a high-fidelity technical prompt. It gives your AI companion the exact context needed to execute flawlessly on the first try, so you can stop wrestling with prompts and keep shipping.
-
----
 
 ## **Features**
 
