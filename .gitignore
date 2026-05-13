@@ -9,3 +9,12 @@ worker/.dev.vars
 
 # Claude Code local settings
 .claude/
+
+# Not part of the main extension
+extension2/
+worker/
+implement.md
+Frontend_design_skill.md
+package.json
+package-lock.json
+ui-components.json

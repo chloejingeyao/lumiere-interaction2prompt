@@ -1,7 +1,0 @@
-name            = "v2c-proxy"
-main            = "index.js"
-compatibility_date = "2025-01-01"
-
-# Secrets are set via CLI — never committed:
-#   wrangler secret put ANTHROPIC_API_KEY
-#   wrangler secret put ALLOWED_EXTENSION_IDS
