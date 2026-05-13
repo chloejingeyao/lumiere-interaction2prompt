@@ -12,7 +12,7 @@ Lumiere fixes this. It captures any live UI element and its interactions, instan
 
 ## **Demo**
 
-<video src="demo_video.mp4" controls width="100%"></video>
+<video src="https://github.com/chloejingeyao/lumiere-interaction2prompt/releases/download/v0.1.0/demo_video.mp4" controls width="100%"></video>
 
 ---
 
