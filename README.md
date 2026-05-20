@@ -56,6 +56,6 @@ Before your first capture, configure the API key for your preferred model within
 Built by Chloe Yao — feel free to reach out or connect.
 
 * 🌐 [chloeyao.com](https://chloeyao.com/)
-* 💼 [LinkedIn](https://www.linkedin.com/in/jychloe/)
+* 💼 [https://www.linkedin.com/in/jychloe/](https://www.linkedin.com/in/jychloe/)
 * ✉️ [jy126c@gmail.com](mailto:jy126c@gmail.com)
 
